@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Pizzaria Bonaiute</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script type="text/javascript" src="../js/cardapio.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Pizzaria Bonaiute</h1>
+    </header>
+
+    <main >        
+        <h2 class="title">Monte seu Pedido</h2>
+        
+        <div id="container-menu">
+            <div>
+                <div id="menu-escolhas">
+                    <h2>Sabores:</h2>
+                    <p>Valores: (Brotinho / Padrão / Grande)</p>
+                    <label><input type="radio" name="sabor" value="Margherita">Margherita (R$18.75 / R$25.00 / R$31.25 )</label><br>
+                    <label><input type="radio" name="sabor" value="Calabresa">Calabresa (R$20.00 / R$27.00 / R$31.25 )</label><br>
+                    <label><input type="radio" name="sabor" value="Frango Com Catupiry">Frango com Catupiry (R$22.50 / R$30.00 / R$37.50 )</label><br>
+                    <label><input type="radio" name="sabor" value="Portuguesa">Portuguesa (R$24.50 / R$32.00 / R$39.50 )</label><br>
+                    <label><input type="radio" name="sabor" value="Quatro Queijos">Quatro Queijos (R$22.50 / R$30.00 / R$37.50 )</label><br>            
+                </div>
+        
+                <div id="menu-escolhas">
+                    <h2>Tamanho:</h2>
+                    <label for=""><input type="radio" name="tamanho" value="Brotinho">Brotinho - 20cm / 4 Pedaços</label><br>
+                    <label for=""><input type="radio" name="tamanho" value="Padrao">Padrão - 30cm / 8 Pedaços</label><br>
+                    <label for=""><input type="radio" name="tamanho" value="Grande">Grande - 40cm / 12 Pedaços</label><br>
+                </div>
+        
+                <div id="menu-escolhas">
+                    <h2>Borda:</h2>
+                    <label for=""><input type="radio" name="borda" value="Sem Borda">Sem Borda</label><br>
+                    <label for=""><input type="radio" name="borda" value="Tradicional">Tradicional</label><br>
+                    <label for=""><input type="radio" name="borda" value="Recheada Catupiry">Recheada com Catupiry (+ R$2.00)</label><br>
+                    <label for=""><input type="radio" name="borda" value="Recheada Cheddar">Recheada com Cheddar (+ R$3.00)</label><br>
+                </div>
+            </div>
+    
+            <div>
+                <div id="menu-escolhas">
+                    <h2>Ingredientes Extras:</h2>
+                    <label for=""><input type="checkbox" name="extraQueijo">Queijo Extra (+ R$2.00)</label><br>
+                    <label for=""><input type="checkbox" name="extraCheddar">Cheddar Extra (+ R$5.00)</label><br>
+                    <label for=""><input type="checkbox" name="extraBacon">Bacon Extra (+ R$3.00)</label><br>
+                    <label for=""><input type="checkbox" name="extraPepperoni">Pepperoni Extra (+ R$4.00)</label><br>
+                </div>
+        
+                <div id="menu-escolhas">
+                    <h2>Opcionais - Preparação:</h2>
+                    <p>Sem Custo Adicional.</p>
+                    <label for=""><input type="checkbox" name="opcionalOregano">Oregano</label><br>
+                    <label for=""><input type="checkbox" name="opcionalAzeitona">Azeitona</label><br>
+                    <label for=""><input type="checkbox" name="opcionalAzeite">Azeite</label><br>
+                    <label for=""><input type="checkbox" name="opcionalPimentaReino">Pimenta do Reino</label><br>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <button class="botao">Montar Pizza</button>       
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pizzaria Bonaiute - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

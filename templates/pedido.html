@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido - Pizzaria Bonaiute</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Pizzaria Bonaiute</h1>
+    </header>
+    <main>
+        <div id="pedido-page">
+            <h2>Resumo do pedido:</h2>
+            <div id="desc-container">
+                <div id="pedidoContainer">
+                    <table id="pedidoDesc">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Descrição do Pedido
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="pedido-descricao">
+                                    -------
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        
+                <h2>Total do Pedido:</h2>
+                <p id="pedido-total"> 0,00</p>
+            </div>
+            <a class="botao" href="/confirmacao">Confirmar Pedido</a>
+            <a class="link" href="/cardapio">Cancelar</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pizzaria Bonaiute - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const urlParams = new URLSearchParams(window.location.search);
+            const pedidoString = urlParams.get('pedido');
+
+            if(pedidoString){
+                const pedidoJSON = JSON.parse(pedidoString);
+
+                const descricaoPedidoElement = document.getElementById('pedido-descricao');
+                descricaoPedidoElement.innerHTML = pedidoJSON.descricao;
+                
+                const totalPedidoElement = document.getElementById('pedido-total');
+                totalPedidoElement.textContent = 'Total do Pedido = R$ ' + pedidoJSON.total;
+            } else {
+                const pedidoDetailsElement = document.getElementById('pedido-details');
+                pedidoDetailsElement.innerHTML = '<p>Não foi possivel recuperar os detalhes do pedido</p>';
+            }
+        })
+    </script>
+</body>
+</html>
